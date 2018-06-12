@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: conf
+  profiles:
+    active: abc
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId:
+      profile: local
+      uri: http://localhost:8888/
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+server:
+  port: 8091
+management:
+  security:
+    enabled: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
